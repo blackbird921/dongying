@@ -1,0 +1,158 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-18 02:42:05
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-18 02:43:17
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-18 02:43:32
+hint
+hint
+project --topLevelPackage com.springsource.petclinic
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+enum type --class ~.reference.PetType
+enum constant --name Dog
+enum constant --name Cat
+enum constant --name Bird
+enum type --class ~.reference.Specialty
+enum constant --name Cardiology
+enum constant --name Dentistry
+enum constant --name Nutrition
+entity jpa --class ~.domain.Pet --sequenceName PET_SEQ
+entity jpa --class ~.domain.Visit --sequenceName VISIT_SEQ
+entity jpa --class ~.domain.AbstractPerson --abstract
+entity jpa --class ~.domain.Vet --extends ~.domain.AbstractPerson
+entity jpa --class ~.domain.Owner --extends ~.domain.AbstractPerson
+field string --fieldName firstName --sizeMin 3 --sizeMax 30 --class ~.domain.AbstractPerson
+field string --fieldName lastName --notNull --sizeMin 3 --sizeMax 30
+field string --fieldName address --notNull --sizeMax 50 --sizeMin 1
+field string --fieldName city --notNull --sizeMax 30
+field string --fieldName telephone --notNull
+field string --fieldName homePage --sizeMax 30
+field string --fieldName email --sizeMax 30 --sizeMin 6
+field date --fieldName birthDay --type java.util.Date --notNull
+field string --fieldName description --sizeMax 255 --class ~.domain.Visit
+field date --fieldName visitDate --type java.util.Date --notNull --past
+field reference --fieldName pet --type ~.domain.Pet --notNull
+field reference --fieldName vet --type ~.domain.Vet
+field boolean --fieldName sendReminders --notNull --primitive --class ~.domain.Pet
+field string --fieldName name --notNull --sizeMin 1
+field number --fieldName weight --type java.lang.Float --notNull --min 0
+field reference --fieldName owner --type ~.domain.Owner
+field enum --fieldName type --type ~.reference.PetType --notNull
+field date --fieldName employedSince --type java.util.Calendar --notNull --past --class ~.domain.Vet
+field enum --fieldName specialty --type ~.reference.Specialty --notNull false
+field set --class ~.domain.Owner --fieldName pets --type ~.domain.Pet --mappedBy owner --notNull false --cardinality ONE_TO_MANY
+finder add --finderName findPetsByNameAndWeight --class ~.domain.Pet
+finder add --finderName findPetsByOwner
+finder add --finderName findPetsBySendRemindersAndWeightLessThan
+finder add --finderName findPetsByTypeAndNameLike
+finder add --finderName findVisitsByDescriptionAndVisitDate --class ~.domain.Visit
+finder add --finderName findVisitsByVisitDateBetween
+finder add --finderName findVisitsByDescriptionLike
+test integration --entity ~.domain.Vet
+test integration --entity ~.domain.Owner
+test integration --entity ~.domain.Pet
+test integration --entity ~.domain.Visit
+web mvc setup
+web mvc all --package ~.web
+web mvc finder all
+web mvc language --code de
+web mvc language --code es
+selenium test --controller ~.web.OwnerController
+selenium test --controller ~.web.PetController
+selenium test --controller ~.web.VetController
+selenium test --controller ~.web.VisitController
+logging setup --level INFO
+// script clinic.roo
+security setup
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-24 12:32:59
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-02-24 12:33:19
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-02-29 02:59:35
+// [failed] database introspect --schema non-schema-required
+addon info id --searchResultId 01
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml.zip
+osgi obr start --bundleSymbolicName org.springframework.roo.wrapping.h2
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml.zip
+addon install id --searchResultId 01
+database introspect --schema non-schema-required
+database introspect --schema no-schema-required
+database introspect --schema test
+database introspect --schema PUBLIC
+database reverse engineer --package ~.domain --schema PUBLIC
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-02 18:04:12
+hint
+database reverse engineer --package ~.domain --schema PUBLIC
+web mvc all --package ~.web
+jpa setup --provider HIBERNATE --database H2_IN_MEMORY
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-02 22:27:41
+enum type --class ~.reference.CustomerStatus
+enum constant --name Trial
+enum constant --name Approved
+enum constant --name Suspended
+enum constant --name Disabled
+// [failed] enum type --class ~.reference.Role
+// [failed] script entity.roo
+enum type --class ~.reference.CustomerStatus
+enum constant --name Trial
+enum constant --name Approved
+enum constant --name Suspended
+enum constant --name Disabled
+// [failed] enum type --class ~.reference.Role
+// [failed] script entity.roo
+enum type --class ~.reference.CustomerStatus
+enum constant --name Trial
+enum constant --name Approved
+enum constant --name Suspended
+enum constant --name Disabled
+enum type --class ~.reference.CustomerRole
+// [failed] enum constant --name User
+// [failed] script entity.roo
+enum type --class ~.reference.CustomerStatus
+enum constant --name Trial
+enum constant --name Approved
+enum constant --name Suspended
+enum constant --name Disabled
+enum type --class ~.reference.CustomerRole
+enum constant --name Customer
+enum constant --name Admin
+enum type --class ~.reference.Sex
+enum constant --name M
+enum constant --name F
+entity jpa --class ~.domain.Customer --sequenceName CUSTOMER_SEQ
+field string --fieldName username --notNull --sizeMax 30 --sizeMin 3 --class ~.domain.Customer
+field string --fieldName password --notNull --sizeMax 15 --sizeMin 4
+field string --fieldName email    --notNull --sizeMax 30 --sizeMin 5
+field enum   --fieldName status   --notNull --type ~.reference.CustomerStatus
+field enum   --fieldName customerRole       --type ~.reference.CustomerRole
+field string --fieldName name               --sizeMax 30
+field string --fieldName address            --sizeMax 100
+field string --fieldName city               --sizeMax 30
+field string --fieldName phone              --sizeMax 30
+// [failed] script entity.roo
+enum type --class ~.reference.CustomerStatus
+enum constant --name Trial
+enum constant --name Approved
+enum constant --name Suspended
+enum constant --name Disabled
+enum type --class ~.reference.CustomerRole
+enum constant --name Customer
+enum constant --name Admin
+enum type --class ~.reference.Sex
+enum constant --name M
+enum constant --name F
+entity jpa --class ~.domain.Customer --sequenceName CUSTOMER_SEQ
+field string --fieldName username --notNull --sizeMax 30 --sizeMin 3 --class ~.domain.Customer
+field string --fieldName password --notNull --sizeMax 15 --sizeMin 4
+field string --fieldName email    --notNull --sizeMax 30 --sizeMin 5
+field enum   --fieldName status   --notNull --type ~.reference.CustomerStatus
+field enum   --fieldName customerRole       --type ~.reference.CustomerRole
+field string --fieldName name               --sizeMax 30
+field string --fieldName address            --sizeMax 100
+field string --fieldName city               --sizeMax 30
+field string --fieldName phone              --sizeMax 30
+field enum   --fieldName sex                --type ~.reference.Sex
+field date   --fieldName birthday           --type java.util.Date --past
+field other  --fieldName picture            --type java.sql.Blob
+field string --fieldName bio                --sizeMax 500
+field date   --fieldName registatrationDate --type java.util.Date
+field date   --fieldName disableStartDate   --type java.util.Date
+field date   --fieldName disableEndDate     --type java.util.Date
+field string --fieldName disableReason      --sizeMax 100
+// script entity.roo

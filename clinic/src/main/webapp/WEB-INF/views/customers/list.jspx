@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_springsource_petclinic_domain_Customer" items="${customers}" z="V70zZM7KQbxdHlwNVIhrz41WOuM=">
+        <table:table data="${customers}" id="l_com_springsource_petclinic_domain_Customer" path="/customers" z="EIFGsCe2s+uuN4H9sMm2lTcDTEQ=">
+            <table:column id="c_com_springsource_petclinic_domain_Customer_username" property="username" z="OsJYQ6DCGyg2kiMB/rU9AlOdWBI="/>
+            <table:column id="c_com_springsource_petclinic_domain_Customer_password" property="password" z="whbJhQ5jyn90FQXoLk6KVfsg5KQ="/>
+            <table:column id="c_com_springsource_petclinic_domain_Customer_email" property="email" z="70mbYHenDEGDnsPq66BS0t4llv0="/>
+            <table:column id="c_com_springsource_petclinic_domain_Customer_status" property="status" z="i6UUkHlqvzvKuNGErti34ktBQVo="/>
+            <table:column id="c_com_springsource_petclinic_domain_Customer_customerRole" property="customerRole" z="cQKS04Jr4alCmvNl0c+ShiGdsNg="/>
+            <table:column id="c_com_springsource_petclinic_domain_Customer_name" property="name" z="IiPLwDBcWqya3ozh3jgTkEZmpKc="/>
+        </table:table>
+    </page:list>
+</div>

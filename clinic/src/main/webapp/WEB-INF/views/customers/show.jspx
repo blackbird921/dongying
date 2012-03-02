@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_springsource_petclinic_domain_Customer" object="${customer}" path="/customers" z="SzbILRrqHuALzR2KYdS5aaVGRnQ=">
+        <field:display field="username" id="s_com_springsource_petclinic_domain_Customer_username" object="${customer}" z="f03VPhE/mu9VNxyHyFrYe3Q4Qog="/>
+        <field:display field="password" id="s_com_springsource_petclinic_domain_Customer_password" object="${customer}" z="3JCD17zgOVfVHDrMmQSdjisybds="/>
+        <field:display field="email" id="s_com_springsource_petclinic_domain_Customer_email" object="${customer}" z="Y/zzsKwzPpSEbDQgCPbQAivW+TE="/>
+        <field:display field="status" id="s_com_springsource_petclinic_domain_Customer_status" object="${customer}" z="i7Pn9UNdVu+rdjHyUABdkiupG6s="/>
+        <field:display field="customerRole" id="s_com_springsource_petclinic_domain_Customer_customerRole" object="${customer}" z="D+/oarBhVhXxtJCJ3DcY1iT1ywU="/>
+        <field:display field="name" id="s_com_springsource_petclinic_domain_Customer_name" object="${customer}" z="SE2i8PyTJZzt+YO1vIr3mHysYec="/>
+        <field:display field="address" id="s_com_springsource_petclinic_domain_Customer_address" object="${customer}" z="QFxWa2VtPJ0QrJt62LBgN364Uwc="/>
+        <field:display field="city" id="s_com_springsource_petclinic_domain_Customer_city" object="${customer}" z="FU6wfx08IGQJPSs34lZN7GPAqNU="/>
+        <field:display field="phone" id="s_com_springsource_petclinic_domain_Customer_phone" object="${customer}" z="CF34WauJ6Led3iI3WB3+73uWswk="/>
+        <field:display field="sex" id="s_com_springsource_petclinic_domain_Customer_sex" object="${customer}" z="ZRaJyjKOaHpig/BMjcHlG5crNjw="/>
+        <field:display date="true" dateTimePattern="${customer_birthday_date_format}" field="birthday" id="s_com_springsource_petclinic_domain_Customer_birthday" object="${customer}" z="DpLhnJQobWixm/i5k7D5DAnk94E="/>
+        <field:display field="picture" id="s_com_springsource_petclinic_domain_Customer_picture" object="${customer}" z="m+/7a/1PQCYQYixfT6yhMudEZuI="/>
+        <field:display field="bio" id="s_com_springsource_petclinic_domain_Customer_bio" object="${customer}" z="txiFB5dP5svSbUqC6TKL1ruOZVU="/>
+        <field:display date="true" dateTimePattern="${customer_registatrationdate_date_format}" field="registatrationDate" id="s_com_springsource_petclinic_domain_Customer_registatrationDate" object="${customer}" z="tMsdw9RrIXWPsdW/AQjbKBZpqeE="/>
+        <field:display date="true" dateTimePattern="${customer_disablestartdate_date_format}" field="disableStartDate" id="s_com_springsource_petclinic_domain_Customer_disableStartDate" object="${customer}" z="Uk/rPNySpmBq2fQe2/OKPTq9tLQ="/>
+        <field:display date="true" dateTimePattern="${customer_disableenddate_date_format}" field="disableEndDate" id="s_com_springsource_petclinic_domain_Customer_disableEndDate" object="${customer}" z="/TqyaHyhw/3o2ABUYpQmxLtmrwA="/>
+        <field:display field="disableReason" id="s_com_springsource_petclinic_domain_Customer_disableReason" object="${customer}" z="IUtW6Gkl4wFe2whfB44bFvqnA9E="/>
+    </page:show>
+</div>
