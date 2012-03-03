@@ -3,5 +3,5 @@ package com.springsource.petclinic.reference;
 
 public enum Sex {
 
-    M, F;
+    男, 女;
 }
